@@ -1,32 +1,36 @@
-package lk.ijse.layeredarchitecture.bo;
+package lk.ijse.ArtWoodLayered.bo;
 
 
-import lk.ijse.layeredarchitecture.bo.custom.impl.CustomerBoImpl;
-import lk.ijse.layeredarchitecture.bo.custom.impl.ItemBoImpl;
-import lk.ijse.layeredarchitecture.bo.custom.impl.PlaceOrderBoImpl;
+import lk.ijse.ArtWoodLayered.bo.custom.impl.CustomerBOImpl;
+import lk.ijse.ArtWoodLayered.bo.custom.impl.EmployeeBOImpl;
+import lk.ijse.ArtWoodLayered.bo.custom.impl.ProductTypeBOImpl;
+import lk.ijse.ArtWoodLayered.bo.custom.impl.SupplierBOImpl;
+import lk.ijse.ArtWoodLayered.dao.custom.impl.SupplierDAOImpl;
 
-public class BoFactory {
-    private static BoFactory boFactory ;
-    private BoFactory(){
+public class BOFactory {
+    private static BOFactory boFactory ;
+    private BOFactory(){
 
     }
 
-    public static BoFactory getBoFactory(){
-        return (boFactory==null)? boFactory = new BoFactory():boFactory ;
+    public static BOFactory getBoFactory(){
+        return (boFactory==null)? boFactory = new BOFactory():boFactory ;
     }
 
     public enum BoTypes{
-        CUSTOMER, ITEM, PLACE_ORDER
+        CUSTOMER, SUPPLIER, EMPLOYEE, PRODUCT_TYPE
     }
 
-    public SuperBo getBoo(BoFactory.BoTypes boTypes){
+    public SuperBO getBoo(BoTypes boTypes){
         switch (boTypes){
-            case ITEM:
-                return new ItemBoImpl();
             case CUSTOMER:
-                return new CustomerBoImpl();
-            case PLACE_ORDER:
-                return new PlaceOrderBoImpl();
+                return new CustomerBOImpl();
+            case SUPPLIER:
+                return new SupplierBOImpl();
+            case EMPLOYEE:
+                return new EmployeeBOImpl();
+            case PRODUCT_TYPE:
+                return new ProductTypeBOImpl();
             default:
                 return null;
         }

@@ -1,2 +1,4 @@
-package lk.ijse.ArtWoodLayered.controller;public class ResetPwController {
+package lk.ijse.ArtWoodLayered.controller;
+
+public class ResetPwController {
 }

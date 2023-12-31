@@ -10,7 +10,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="557.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.FianlArtWood.controller.ForgotPwController">
+<AnchorPane fx:id="rootNode" prefHeight="557.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ArtWoodLayered.controller.ForgotPwController">
    <children>
       <Label layoutX="62.0" layoutY="70.0" text="Verification">
          <font>

@@ -1,2 +1,4 @@
-package lk.ijse.ArtWoodLayered.controller;public class OwnerStockController {
+package lk.ijse.ArtWoodLayered.controller;
+
+public class OwnerStockController {
 }

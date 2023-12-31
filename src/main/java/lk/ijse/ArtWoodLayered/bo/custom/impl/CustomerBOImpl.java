@@ -1,4 +1,4 @@
-package lk.ijse.ArtWoodLayered.bo;
+package lk.ijse.ArtWoodLayered.bo.custom.impl;
 
 import lk.ijse.ArtWoodLayered.bo.custom.CustomerBO;
 import lk.ijse.ArtWoodLayered.dao.DAOFactory;

@@ -1,2 +1,4 @@
-package lk.ijse.ArtWoodLayered.controller;public class LogsStockController {
+package lk.ijse.ArtWoodLayered.controller;
+
+public class LogsStockController {
 }

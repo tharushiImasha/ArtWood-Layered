@@ -1,4 +1,4 @@
-package lk.ijse.layeredarchitecture.dao;
+package lk.ijse.ArtWoodLayered.dao;
 
-public interface SuperDao {
+public interface SuperDAO {
 }

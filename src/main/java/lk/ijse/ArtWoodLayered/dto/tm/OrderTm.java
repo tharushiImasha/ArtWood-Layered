@@ -1,4 +1,4 @@
-package lk.ijse.FianlArtWood.dto.tm;
+package lk.ijse.ArtWoodLayered.dto.tm;
 
 import javafx.scene.control.Button;
 import lombok.*;

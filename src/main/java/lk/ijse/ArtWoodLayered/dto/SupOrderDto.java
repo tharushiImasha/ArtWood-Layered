@@ -1,7 +1,6 @@
-package lk.ijse.FianlArtWood.dto;
+package lk.ijse.ArtWoodLayered.dto;
 
 import lk.ijse.FianlArtWood.dto.tm.LogsTm;
-import lk.ijse.FianlArtWood.dto.tm.OrderTm;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

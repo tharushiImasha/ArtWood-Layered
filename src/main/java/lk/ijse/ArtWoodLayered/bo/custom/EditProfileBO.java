@@ -1,4 +1,4 @@
-package lk.ijse.ArtWoodLayered.bo;
+package lk.ijse.ArtWoodLayered.bo.custom;
 
 public interface EditProfileBO {
 }

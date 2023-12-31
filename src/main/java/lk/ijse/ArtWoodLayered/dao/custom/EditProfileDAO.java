@@ -1,4 +1,4 @@
-package lk.ijse.ArtWoodLayered.dao;
+package lk.ijse.ArtWoodLayered.dao.custom;
 
 public interface EditProfileDAO {
 }

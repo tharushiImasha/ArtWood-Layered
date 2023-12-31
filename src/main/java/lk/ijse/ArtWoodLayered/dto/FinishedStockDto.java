@@ -1,4 +1,4 @@
-package lk.ijse.FianlArtWood.dto;
+package lk.ijse.ArtWoodLayered.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

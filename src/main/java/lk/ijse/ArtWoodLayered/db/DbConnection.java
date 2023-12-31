@@ -1,4 +1,4 @@
-package lk.ijse.FianlArtWood.db;
+package lk.ijse.ArtWoodLayered.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,2 +1,4 @@
-package lk.ijse.ArtWoodLayered.controller;public class PendingStockController {
+package lk.ijse.ArtWoodLayered.controller;
+
+public class PendingStockController {
 }

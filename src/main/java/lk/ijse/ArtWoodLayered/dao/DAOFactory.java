@@ -1,35 +1,35 @@
-package lk.ijse.layeredarchitecture.dao;
+package lk.ijse.ArtWoodLayered.dao;
 
-import lk.ijse.layeredarchitecture.dao.custom.impl.*;
+import lk.ijse.ArtWoodLayered.dao.custom.impl.CustomerDAOImpl;
+import lk.ijse.ArtWoodLayered.dao.custom.impl.EmployeeDAOImpl;
+import lk.ijse.ArtWoodLayered.dao.custom.impl.ProductTypeDAOImpl;
+import lk.ijse.ArtWoodLayered.dao.custom.impl.SupplierDAOImpl;
 
+public class DAOFactory {
 
-public class DaoFactory {
-
-    private static DaoFactory daoFactory;
-    private DaoFactory(){
+    private static DAOFactory daoFactory;
+    private DAOFactory(){
 
     }
 
-    public static DaoFactory getDaoFactory(){
-        return (daoFactory==null)? daoFactory = new DaoFactory(): daoFactory;
+    public static DAOFactory getDaoFactory(){
+        return (daoFactory==null)? daoFactory = new DAOFactory(): daoFactory;
     }
 
     public enum DaoTypes{
-        CUSTOMER, ITEM, ORDER, ORDER_DETAIL, QUERY
+        CUSTOMER, SUPPLIER, EMPLOYEE, PRODUCT_TYPE, QUERY
     }
 
-    public SuperDao getDao(DaoTypes daoTypes){
+    public SuperDAO getDao(DaoTypes daoTypes){
         switch (daoTypes){
-            case ITEM:
-                return new ItemDaoImpl();
             case CUSTOMER:
-                return new CustomerDaoImpl();
-            case ORDER:
-                return new OrderDaoImpl();
-            case ORDER_DETAIL:
-                return new OrderDetailDaoImpl();
-            case QUERY:
-                return new QueryDaoImpl();
+                return new CustomerDAOImpl();
+            case SUPPLIER:
+                return new SupplierDAOImpl();
+            case EMPLOYEE:
+                return new EmployeeDAOImpl();
+            case PRODUCT_TYPE:
+                return new ProductTypeDAOImpl();
             default:
                 return null;
         }

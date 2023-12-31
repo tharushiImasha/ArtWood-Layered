@@ -1,4 +1,4 @@
-package lk.ijse.layeredarchitecture.bo;
+package lk.ijse.ArtWoodLayered.bo;
 
-public interface SuperBo {
+public interface SuperBO {
 }
