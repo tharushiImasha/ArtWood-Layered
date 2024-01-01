@@ -1,10 +1,7 @@
 package lk.ijse.ArtWoodLayered.bo;
 
 
-import lk.ijse.ArtWoodLayered.bo.custom.impl.CustomerBOImpl;
-import lk.ijse.ArtWoodLayered.bo.custom.impl.EmployeeBOImpl;
-import lk.ijse.ArtWoodLayered.bo.custom.impl.ProductTypeBOImpl;
-import lk.ijse.ArtWoodLayered.bo.custom.impl.SupplierBOImpl;
+import lk.ijse.ArtWoodLayered.bo.custom.impl.*;
 import lk.ijse.ArtWoodLayered.dao.custom.impl.SupplierDAOImpl;
 
 public class BOFactory {
@@ -18,7 +15,7 @@ public class BOFactory {
     }
 
     public enum BoTypes{
-        CUSTOMER, SUPPLIER, EMPLOYEE, PRODUCT_TYPE
+        CUSTOMER, SUPPLIER, EMPLOYEE, PRODUCT_TYPE, LOGS, SUP_ORDER, PLACE_SUP_ORDER
     }
 
     public SuperBO getBoo(BoTypes boTypes){
@@ -31,6 +28,12 @@ public class BOFactory {
                 return new EmployeeBOImpl();
             case PRODUCT_TYPE:
                 return new ProductTypeBOImpl();
+            case LOGS:
+                return new LogStockBOImpl();
+            case SUP_ORDER:
+                return new SupOrderBOImpl();
+            case PLACE_SUP_ORDER:
+                return new PlaceSupOrderBOImpl();
             default:
                 return null;
         }

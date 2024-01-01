@@ -1,9 +1,6 @@
 package lk.ijse.ArtWoodLayered.dao;
 
-import lk.ijse.ArtWoodLayered.dao.custom.impl.CustomerDAOImpl;
-import lk.ijse.ArtWoodLayered.dao.custom.impl.EmployeeDAOImpl;
-import lk.ijse.ArtWoodLayered.dao.custom.impl.ProductTypeDAOImpl;
-import lk.ijse.ArtWoodLayered.dao.custom.impl.SupplierDAOImpl;
+import lk.ijse.ArtWoodLayered.dao.custom.impl.*;
 
 public class DAOFactory {
 
@@ -17,7 +14,7 @@ public class DAOFactory {
     }
 
     public enum DaoTypes{
-        CUSTOMER, SUPPLIER, EMPLOYEE, PRODUCT_TYPE, QUERY
+        CUSTOMER, SUPPLIER, EMPLOYEE, PRODUCT_TYPE, LOGS, SUP_ORDER, SUP_ORDER_DETAIL
     }
 
     public SuperDAO getDao(DaoTypes daoTypes){
@@ -30,6 +27,12 @@ public class DAOFactory {
                 return new EmployeeDAOImpl();
             case PRODUCT_TYPE:
                 return new ProductTypeDAOImpl();
+            case LOGS:
+                return new LogStockDAOImpl();
+            case SUP_ORDER:
+                return new SupOrderDAOImpl();
+            case SUP_ORDER_DETAIL:
+                return new SupOrderDetailDAOImpl();
             default:
                 return null;
         }

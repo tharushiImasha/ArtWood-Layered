@@ -5,112 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f5c7c8-6634-4a48-8f5f-9949de55d719" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/EmployeeBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/EmployeeBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/EmployeeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/EmployeeDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/Supplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/LogStockBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/PlaceSupOrderBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/SupOrderBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/LogStockBOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/PlaceSupOrderBOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/SupOrderBOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/LogStockDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/SupOrderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/SupOrderDetailDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/LogStockDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/SupOrderDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/SupOrderDetailDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/Logs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/SupOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/SupOrderDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/BOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/BOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/SuperBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/SuperBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/CustomerBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/CustomerBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/EditProfileBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/EditProfileBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/SupplierBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/SupplierBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/CustomerBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/CustomerBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/EditProfileBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/EditProfileBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/SupplierBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/SupplierBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/CashierDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/CashierDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/CashierDashboardPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/CashierDashboardPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/DashboardPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/DashboardPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/EditProfileFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/EditProfileFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/FinishedStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/FinishedStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ForgotPwController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ForgotPwController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ItemTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ItemTestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/LoginFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/LogsStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/LogsStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerCustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerEmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerFinanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerFinanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerProductTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerProductTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerSupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerSupplierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/PendingStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/PendingStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ResetPwController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ResetPwController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/SalaryFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/SalaryFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/StockManagerDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/StockManagerDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/StockManagerDashboardPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/StockManagerDashboardPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/WoodPiecesStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/WoodPiecesStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/CrudDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/CrudDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/DAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/SqlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/SqlUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/SuperDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/SuperDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/EditProfileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/EditProfileDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/SupplierDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/SupplierDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/CustomerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/EditProfileDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/EditProfileDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/SupplierDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/SupplierDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/db/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/db/DbConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/CustomerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/EmployeeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/FinanceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/FinanceDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/FinishedStockDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/FinishedStockDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/LoginDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/LogsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/LogsDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/OrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/OtherSalaryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/OtherSalaryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/PendingStockDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/PendingStockDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/ProductTypeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/ProductTypeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/SalaryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/SalaryDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/SupOrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/SupOrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/SupplierDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/SupplierDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/WoodPiecesDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/WoodPiecesDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/CustomerTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/CustomerTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/EmployeeTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/EmployeeTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/FinanceTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/FinanceTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/FinishedStockTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/FinishedStockTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/LogsTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/LogsTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/OrderTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/OrderTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/OtherSalaryTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/OtherSalaryTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/PendingStockTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/PendingStockTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/ProductTypeTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/ProductTypeTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/SalaryTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/SalaryTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/SupplierTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/SupplierTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/UserTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/UserTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/WoodPiecesTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dto/tm/WoodPiecesTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/cashier_customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/cashier_customer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/cashier_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/cashier_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/cashier_dashboard_pane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/cashier_dashboard_pane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/cashier_order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/cashier_order.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard_pane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_pane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/edit_profile_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/edit_profile_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/finished_stock.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/finished_stock.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/forgot_pw.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/forgot_pw.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/item_test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/item_test.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/logs_stock.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/logs_stock.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/owner_customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/owner_customer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/owner_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/owner_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/owner_employee.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/owner_employee.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/owner_finance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/owner_finance.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/owner_order.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/owner_order.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/owner_product_type.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/owner_product_type.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/owner_stock.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/owner_stock.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/owner_supplier.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/owner_supplier.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/pending_stock.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/pending_stock.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/reset_pw.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/reset_pw.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/salaryForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/salaryForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/stock_manager_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/stock_manager_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/stock_manager_dashboard_pane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/stock_manager_dashboard_pane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/stock_manager_stock.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/stock_manager_stock.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/test.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/test.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/wood_pieces_stock.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/wood_pieces_stock.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>

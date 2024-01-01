@@ -1,4 +1,4 @@
-package lk.ijse.ArtWoodLayered.dto;
+package lk.ijse.ArtWoodLayered.entity;
 
 import lk.ijse.ArtWoodLayered.dto.tm.LogsTm;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class SupOrderDto {
+public class SupOrder {
     private String sup_order_id;
     private  double price;
     private String type;
