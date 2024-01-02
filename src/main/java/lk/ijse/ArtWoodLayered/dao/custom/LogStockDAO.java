@@ -10,4 +10,5 @@ import java.util.List;
 public interface LogStockDAO extends CrudDAO<Logs> {
     int getLogCount() throws SQLException;
     List<LogsDto> getAllLogsForCombo() throws SQLException;
+    boolean reduce(String log_id) throws SQLException;
 }

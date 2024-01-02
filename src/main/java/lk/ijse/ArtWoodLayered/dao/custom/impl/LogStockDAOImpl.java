@@ -63,8 +63,8 @@ public class LogStockDAOImpl implements LogStockDAO {
     }
 
     @Override
-    public Logs search(String tel) throws SQLException {
-        ResultSet resultSet = SqlUtil.execute("SELECT * FROM log_stock WHERE logs_id = ?", tel);
+    public Logs search(String id) throws SQLException {
+        ResultSet resultSet = SqlUtil.execute("SELECT * FROM log_stock WHERE logs_id = ?", id);
 
         Logs dto = null;
 
@@ -105,6 +105,11 @@ public class LogStockDAOImpl implements LogStockDAO {
             dtoList.add(dto);
         }
         return dtoList;
+    }
+
+    @Override
+    public boolean reduce(String log_id) throws SQLException {
+        return SqlUtil.execute("update log_stock set logs_amount = 0 where logs_id = ?", log_id);
     }
 
 }

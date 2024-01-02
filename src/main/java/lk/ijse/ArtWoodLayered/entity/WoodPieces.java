@@ -4,13 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-
-@AllArgsConstructor
 @NoArgsConstructor
 @Data
+@AllArgsConstructor
 
-public class SupOrderDetail {
-    private String sup_order_id;
+public class WoodPieces {
+    private String wood_piece_id;
+    private String quality;
+    private int amount;
+    private String wood_type;
     private String logs_id;
 }

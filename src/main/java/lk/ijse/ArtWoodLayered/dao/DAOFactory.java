@@ -14,7 +14,7 @@ public class DAOFactory {
     }
 
     public enum DaoTypes{
-        CUSTOMER, SUPPLIER, EMPLOYEE, PRODUCT_TYPE, LOGS, SUP_ORDER, SUP_ORDER_DETAIL
+        CUSTOMER, SUPPLIER, EMPLOYEE, PRODUCT_TYPE, LOGS, SUP_ORDER, SUP_ORDER_DETAIL, FINANCE, WOOD_PIECES, PENDING_STOCK, FINISHED_STOCK
     }
 
     public SuperDAO getDao(DaoTypes daoTypes){
@@ -33,6 +33,14 @@ public class DAOFactory {
                 return new SupOrderDAOImpl();
             case SUP_ORDER_DETAIL:
                 return new SupOrderDetailDAOImpl();
+            case FINANCE:
+                return new FinanceDAOImpl();
+            case WOOD_PIECES:
+                return new WoodPiecesStockDAOImpl();
+            case PENDING_STOCK:
+                return new PendingStockDAOImpl();
+            case FINISHED_STOCK:
+                return new FinishedStockDAOImpl();
             default:
                 return null;
         }

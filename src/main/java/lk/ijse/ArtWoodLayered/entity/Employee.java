@@ -16,7 +16,7 @@ public class Employee {
     private String status;
     private String job_role;
 
-    public Employee(String emp_id , String name, String address, int tel, String job_role){
+    public Employee(String name, String address, int tel, String job_role, String emp_id){
         this.address = address;
         this.emp_id = emp_id;
         this.name = name;

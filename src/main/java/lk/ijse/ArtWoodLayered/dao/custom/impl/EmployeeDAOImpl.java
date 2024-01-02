@@ -65,7 +65,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
             int tel = Integer.parseInt(resultSet.getString(4));
             String job_role = resultSet.getString(6);
 
-            dto = new Employee(emp_id, name, address, tel, job_role);
+            dto = new Employee(name, address, tel, job_role, emp_id);
 
         }
 

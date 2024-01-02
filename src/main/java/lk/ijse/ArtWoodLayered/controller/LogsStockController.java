@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.ArtWoodLayered.bo.BOFactory;
 import lk.ijse.ArtWoodLayered.bo.custom.LogStockBO;
+import lk.ijse.ArtWoodLayered.bo.custom.PlaceSupOrderBO;
 import lk.ijse.ArtWoodLayered.bo.custom.SupOrderBO;
 import lk.ijse.ArtWoodLayered.bo.custom.SupplierBO;
 import lk.ijse.ArtWoodLayered.dto.LogsDto;
@@ -65,6 +66,7 @@ public class LogsStockController {
     LogStockBO logStockBO = (LogStockBO) BOFactory.getBoFactory().getBoo(BOFactory.BoTypes.LOGS);
     SupplierBO supplierBO = (SupplierBO) BOFactory.getBoFactory().getBoo(BOFactory.BoTypes.SUPPLIER);
     SupOrderBO supOrderBO = (SupOrderBO) BOFactory.getBoFactory().getBoo(BOFactory.BoTypes.SUP_ORDER);
+    PlaceSupOrderBO placeSupOrderBO = (PlaceSupOrderBO) BOFactory.getBoFactory().getBoo(BOFactory.BoTypes.PLACE_SUP_ORDER);
 
     public void initialize() {
         setCellValueFactory();
@@ -208,7 +210,7 @@ public class LogsStockController {
         var placeOrderDto = new SupOrderDto(supOrderId, price, type, sup_id, pay_meth, tmList);
 
         try {
-            boolean isSuccess = PlaceSupOrderModel.placeSupOrder(placeOrderDto);
+            boolean isSuccess = placeSupOrderBO.placeSupOrder(placeOrderDto);
             if(isSuccess) {
                 new Alert(Alert.AlertType.CONFIRMATION, "order completed!").show();
 
