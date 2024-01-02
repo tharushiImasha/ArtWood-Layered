@@ -217,7 +217,7 @@ public class PendingStockController {
 
             boolean isUpdateFinished = FinishedStockModel.updateFinishedFromP(finished_id);
 
-            if (isUpdateFinished){
+            if (isUpdateFinished) {
                 boolean isSalarySaved = SalaryModel.saveSalary(emp_id);
 
                 if (isSalarySaved) {
@@ -238,9 +238,10 @@ public class PendingStockController {
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             connection.rollback();
-        }finally {
+        } finally {
             connection.setAutoCommit(true);
         }
+    }
 
     private void deletePending(String id) {
         try {
