@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class DashboardPaneController {
+
     @FXML
     private AnchorPane rootNode;
 
@@ -304,4 +305,5 @@ public class DashboardPaneController {
         secondaryNode.getChildren().clear();
         secondaryNode.getChildren().add(FXMLLoader.load(secondaryNode.getClass().getResource("/view/owner_supplier.fxml")));
     }
+
 }

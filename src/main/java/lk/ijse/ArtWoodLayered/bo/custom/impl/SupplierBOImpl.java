@@ -9,6 +9,7 @@ import lk.ijse.ArtWoodLayered.dto.SupplierDto;
 import lk.ijse.ArtWoodLayered.entity.Supplier;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SupplierBOImpl implements SupplierBO {
@@ -17,7 +18,13 @@ public class SupplierBOImpl implements SupplierBO {
 
     @Override
     public List<SupplierDto> getAllSuppliers() throws SQLException {
-        return supplierDAO.getAll();
+        List<Supplier> suppliers = supplierDAO.getAll();
+        List<SupplierDto> supplierDtos = new ArrayList<>();
+
+        for (Supplier supplier : suppliers){
+            supplierDtos.add(new SupplierDto(supplier.getId(), supplier.getName(), supplier.getAddress(), supplier.getEmail()));
+        }
+        return supplierDtos;
     }
 
     @Override

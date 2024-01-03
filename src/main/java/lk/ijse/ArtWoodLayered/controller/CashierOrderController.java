@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class OwnerOrderController {
+public class CashierOrderController {
 
     private final ObservableList<OrderTm> obList = FXCollections.observableArrayList();
 

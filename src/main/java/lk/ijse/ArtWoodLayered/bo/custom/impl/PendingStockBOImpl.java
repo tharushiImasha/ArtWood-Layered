@@ -1,9 +1,9 @@
 package lk.ijse.ArtWoodLayered.bo.custom.impl;
 
-import javafx.scene.control.Alert;
 import lk.ijse.ArtWoodLayered.bo.custom.PendingStockBO;
 import lk.ijse.ArtWoodLayered.dao.DAOFactory;
-import lk.ijse.ArtWoodLayered.dao.custom.PendingStockDAO;
+import lk.ijse.ArtWoodLayered.dao.custom.*;
+import lk.ijse.ArtWoodLayered.db.DbConnection;
 import lk.ijse.ArtWoodLayered.dto.PendingStockDto;
 import lk.ijse.ArtWoodLayered.entity.PendingStock;
 
@@ -15,6 +15,11 @@ import java.util.List;
 public class PendingStockBOImpl implements PendingStockBO {
 
     PendingStockDAO pendingStockDAO = (PendingStockDAO) DAOFactory.getDaoFactory().getDao(DAOFactory.DaoTypes.PENDING_STOCK);
+    FinishedStockDAO finishedStockDAO = (FinishedStockDAO) DAOFactory.getDaoFactory().getDao(DAOFactory.DaoTypes.FINISHED_STOCK);
+    FinanceDAO financeDAO = (FinanceDAO) DAOFactory.getDaoFactory().getDao(DAOFactory.DaoTypes.FINANCE);
+    EmployeeDAO employeeDAO = (EmployeeDAO) DAOFactory.getDaoFactory().getDao(DAOFactory.DaoTypes.EMPLOYEE);
+    SalaryDAO salaryDAO = (SalaryDAO) DAOFactory.getDaoFactory().getDao(DAOFactory.DaoTypes.SALARY);
+    WoodPiecesStockDAO woodPiecesStockDAO = (WoodPiecesStockDAO) DAOFactory.getDaoFactory().getDao(DAOFactory.DaoTypes.WOOD_PIECES);
 
     @Override
     public String generateNextPendingId() throws SQLException, ClassNotFoundException {
@@ -52,41 +57,53 @@ public class PendingStockBOImpl implements PendingStockBO {
         return pendingStockDAO.update(new PendingStock(dto.getEmp_id(), dto.getWood_piece_id(), dto.getFinished_id(), dto.getPending_id()));
     }
 
-    private void finishedPending(String id) throws SQLException {
-        String finished_id = cmbFinshedId.getValue();
-        String emp_id = cmbEmpId.getValue();
-
+    @Override
+    public void finishedPending(String id, String finished_id, String emp_id) throws SQLException, ClassNotFoundException {
         Connection connection = null;
+        connection = DbConnection.getInstance().getConnection();
+        connection.setAutoCommit(false);
 
-        try {
-            connection = DbConnection.getInstance().getConnection();
-            connection.setAutoCommit(false);
+        boolean isUpdateFinished = finishedStockDAO.updateFinishedFromP(finished_id);
 
-            boolean isUpdateFinished = FinishedStockModel.updateFinishedFromP(finished_id);
+        if (isUpdateFinished){
+            boolean isSalarySaved = salaryDAO.saveSalary(emp_id);
 
-            if (isUpdateFinished){
-                boolean isSalarySaved = SalaryModel.saveSalary(emp_id);
+            if (isSalarySaved) {
+                boolean isFinance = financeDAO.reduceFinance("cash", 2000);
 
-                if (isSalarySaved) {
-                    boolean isFinance = FinanceModel.reduceFinance("cash", 2000);
+                if (isFinance) {
+                    boolean isEmployeeUpdated = employeeDAO.employeeAvailability(emp_id, "Available");
 
-                    if (isFinance) {
-                        boolean isEmployeeUpdated = OwnerEmployeeModel.employeeAvailability(emp_id, "Available");
-
-                        if (isEmployeeUpdated) {
-                            deletePending(id);
-                            connection.commit();
-                        }
-
+                    if (isEmployeeUpdated) {
+                        deletePending(id);
+                        connection.commit();
                     }
 
                 }
+
             }
-        } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
-            connection.rollback();
-        }finally {
-            connection.setAutoCommit(true);
+        }
+
+    }
+
+    @Override
+    public void save(PendingStockDto dto, String wood_piece_id, String emp_id) throws SQLException {
+        Connection connection = null;
+
+        connection = DbConnection.getInstance().getConnection();
+        connection.setAutoCommit(false);
+
+        boolean isSaved = pendingStockDAO.save(new PendingStock(dto.getPending_id(), dto.getEmp_id(), dto.getWood_piece_id(), dto.getFinished_id()));
+        if (isSaved) {
+
+            boolean isWoodUpdated = woodPiecesStockDAO.reduceWood(wood_piece_id);
+            if (isWoodUpdated) {
+
+                boolean isEmployeeUpdated = employeeDAO.employeeAvailability(emp_id, "Not Available");
+                if (isEmployeeUpdated) {
+                    connection.commit();
+                }
+            }
         }
 
     }

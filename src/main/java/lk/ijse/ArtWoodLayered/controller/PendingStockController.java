@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.ArtWoodLayered.bo.BOFactory;
 import lk.ijse.ArtWoodLayered.bo.custom.EmployeeBO;
+import lk.ijse.ArtWoodLayered.bo.custom.FinishedStockBO;
 import lk.ijse.ArtWoodLayered.bo.custom.PendingStockBO;
 import lk.ijse.ArtWoodLayered.bo.custom.WoodPiecesStockBO;
 import lk.ijse.ArtWoodLayered.dto.EmployeeDto;
@@ -65,6 +66,7 @@ public class PendingStockController {
     PendingStockBO pendingStockBO = (PendingStockBO) BOFactory.getBoFactory().getBoo(BOFactory.BoTypes.PENDING_STOCK);
     EmployeeBO employeeBO = (EmployeeBO) BOFactory.getBoFactory().getBoo(BOFactory.BoTypes.EMPLOYEE);
     WoodPiecesStockBO woodPiecesStockBO = (WoodPiecesStockBO) BOFactory.getBoFactory().getBoo(BOFactory.BoTypes.WOOD_PIECES);
+    FinishedStockBO finishedStockBO = (FinishedStockBO) BOFactory.getBoFactory().getBoo(BOFactory.BoTypes.FINISHED_STOCK);
 
     public void initialize() {
         setCellValueFactory();
@@ -94,7 +96,7 @@ public class PendingStockController {
     private void loadFinishedId() {
         ObservableList<String> obList = FXCollections.observableArrayList();
         try {
-            List<FinishedStockDto> list = FinishedStockModel.getAllFinishedStock();
+            List<FinishedStockDto> list = finishedStockBO.getAllFinishedStock();
 
             for (FinishedStockDto dto : list) {
                 obList.add(dto.getFinished_id());
@@ -212,32 +214,14 @@ public class PendingStockController {
         Connection connection = null;
 
         try {
-            connection = DbConnection.getInstance().getConnection();
-            connection.setAutoCommit(false);
 
-            boolean isUpdateFinished = FinishedStockModel.updateFinishedFromP(finished_id);
+            pendingStockBO.finishedPending(id, finished_id, emp_id);
 
-            if (isUpdateFinished) {
-                boolean isSalarySaved = SalaryModel.saveSalary(emp_id);
-
-                if (isSalarySaved) {
-                    boolean isFinance = FinanceModel.reduceFinance("cash", 2000);
-
-                    if (isFinance) {
-                        boolean isEmployeeUpdated = OwnerEmployeeModel.employeeAvailability(emp_id, "Available");
-
-                        if (isEmployeeUpdated) {
-                            deletePending(id);
-                            connection.commit();
-                        }
-
-                    }
-
-                }
-            }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             connection.rollback();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         } finally {
             connection.setAutoCommit(true);
         }
@@ -283,29 +267,12 @@ public class PendingStockController {
 
         var dto = new PendingStockDto(pending_id, emp_id, wood_piece_id, finished_id);
 
-        var model = new PendingStockModel();
         Connection connection = null;
 
         try {
-            connection = DbConnection.getInstance().getConnection();
-            connection.setAutoCommit(false);
 
-            boolean isSaved = model.savePending(dto);
-            if (isSaved) {
+            pendingStockBO.save(dto, wood_piece_id, emp_id);
 
-                boolean isWoodUpdated = WoodPiecesStockModel.reduceWood(wood_piece_id);
-                if (isWoodUpdated) {
-
-                    boolean isEmployeeUpdated = OwnerEmployeeModel.employeeAvailability(emp_id, "Not Available");
-                    if (isEmployeeUpdated) {
-
-                        new Alert(Alert.AlertType.CONFIRMATION, "pending saved!").show();
-                        connection.commit();
-                        clearFields();
-
-                    }
-                }
-            }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             connection.rollback();

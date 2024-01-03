@@ -11,7 +11,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class OwnerStockController {
+public class StockManagerStockController {
     @FXML
     private AnchorPane rootNode;
 

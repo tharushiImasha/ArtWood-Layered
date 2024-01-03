@@ -15,7 +15,7 @@ public class BOFactory {
     }
 
     public enum BoTypes{
-        CUSTOMER, SUPPLIER, EMPLOYEE, PRODUCT_TYPE, LOGS, SUP_ORDER, PLACE_SUP_ORDER, WOOD_PIECES, PENDING_STOCK, FINISHED_STOCK
+        CUSTOMER, SUPPLIER, EMPLOYEE, PRODUCT_TYPE, LOGS, SUP_ORDER, PLACE_SUP_ORDER, WOOD_PIECES, PENDING_STOCK, FINISHED_STOCK, FINANCE, SALARY, EDIT_PROFILE, LOGIN, OTHER_SALARY, ORDER, PLACE_ORDER
     }
 
     public SuperBO getBoo(BoTypes boTypes){
@@ -40,6 +40,20 @@ public class BOFactory {
                 return new PendingStockBOImpl();
             case FINISHED_STOCK:
                 return new FinishedStockBOImpl();
+            case FINANCE:
+                return new FinanceBOImpl();
+            case SALARY:
+                return new SalaryBOImpl();
+            case EDIT_PROFILE:
+                return new EditProfileBOImpl();
+            case LOGIN:
+                return new LoginBOImpl();
+            case OTHER_SALARY:
+                return new OtherEmployeeSalaryBOImpl();
+            case ORDER:
+                return new OrderBOImpl();
+            case PLACE_ORDER:
+                return new PlaceOrderBOImpl();
             default:
                 return null;
         }
