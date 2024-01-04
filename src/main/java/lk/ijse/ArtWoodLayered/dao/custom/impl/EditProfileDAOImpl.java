@@ -38,8 +38,8 @@ public class EditProfileDAOImpl implements EditProfileDAO {
     }
 
     @Override
-    public boolean save(Login dto) throws SQLException {
-        ResultSet resultSet = SqlUtil.execute("select job_role from employee where emp_id = ?", dto.getEmp_id());
+    public boolean save(Login entity) throws SQLException {
+        ResultSet resultSet = SqlUtil.execute("select job_role from employee where emp_id = ?", entity.getEmp_id());
 
         String job_role = "Not Employee";
 
@@ -50,14 +50,14 @@ public class EditProfileDAOImpl implements EditProfileDAO {
         boolean isSaved = false;
 
         if (job_role.equals("cashier")||job_role.equals("stock_manager")) {
-            isSaved = SqlUtil.execute("INSERT INTO login VALUES(?, ?, ?)", dto);
+            isSaved = SqlUtil.execute("INSERT INTO login VALUES(?, ?, ?)", entity.getUserName(), entity.getPw(), entity.getEmp_id());
         }
         return isSaved;
     }
 
     @Override
-    public boolean update(Login dto) throws SQLException {
-        return SqlUtil.execute("UPDATE login SET user_name = ?, pw = ? WHERE emp_id = ?", dto);
+    public boolean update(Login entity) throws SQLException {
+        return SqlUtil.execute("UPDATE login SET user_name = ?, pw = ? WHERE emp_id = ?", entity.getUserName(), entity.getPw(), entity.getEmp_id());
     }
 
     @Override

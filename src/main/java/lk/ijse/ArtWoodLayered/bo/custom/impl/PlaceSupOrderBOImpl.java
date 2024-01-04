@@ -5,6 +5,7 @@ import lk.ijse.ArtWoodLayered.dao.DAOFactory;
 import lk.ijse.ArtWoodLayered.dao.custom.FinanceDAO;
 import lk.ijse.ArtWoodLayered.dao.custom.SupOrderDAO;
 import lk.ijse.ArtWoodLayered.dao.custom.SupOrderDetailDAO;
+import lk.ijse.ArtWoodLayered.db.DbConnection;
 import lk.ijse.ArtWoodLayered.dto.SupOrderDto;
 
 import java.sql.Connection;
@@ -21,6 +22,7 @@ public class PlaceSupOrderBOImpl implements PlaceSupOrderBO {
         boolean result = false;
         Connection connection = null;
         try {
+            connection = DbConnection.getInstance().getConnection();
             connection.setAutoCommit(false);
 
             boolean isOrderSaved = supOrderDAO.save(pDto.getSup_order_id(), pDto.getPrice(), pDto.getType(), pDto.getSup_id());

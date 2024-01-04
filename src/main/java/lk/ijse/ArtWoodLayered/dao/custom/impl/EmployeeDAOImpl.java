@@ -43,13 +43,13 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
     @Override
-    public boolean save(Employee dto) throws SQLException {
-        return SqlUtil.execute("INSERT INTO employee VALUES(?, ?, ?, ?, ?, ?)", dto);
+    public boolean save(Employee entity) throws SQLException {
+        return SqlUtil.execute("INSERT INTO employee VALUES(?, ?, ?, ?, ?, ?)", entity.getEmp_id(), entity.getName(), entity.getAddress(), entity.getTel(), entity.getStatus(), entity.getJob_role());
     }
 
     @Override
-    public boolean update(Employee dto) throws SQLException {
-        return SqlUtil.execute("UPDATE employee SET name = ?, address = ?, tel = ?, job_role = ? WHERE emp_id = ?", dto);
+    public boolean update(Employee entity) throws SQLException {
+        return SqlUtil.execute("UPDATE employee SET name = ?, address = ?, tel = ?, job_role = ? WHERE emp_id = ?", entity.getName(), entity.getAddress(), entity.getTel(), entity.getJob_role(), entity.getEmp_id());
     }
 
     @Override

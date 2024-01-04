@@ -9,12 +9,12 @@ import java.sql.SQLException;
 public class FinanceDAOImpl implements FinanceDAO {
     @Override
     public boolean reduceFinance(String pay_method, double amount) throws SQLException {
-        return SqlUtil.execute("UPDATE finance SET amount = amount - ? WHERE pay_method = ?", pay_method, amount);
+        return SqlUtil.execute("UPDATE finance SET amount = amount - ? WHERE pay_method = ?", amount, pay_method);
     }
 
     @Override
     public boolean IncreaseFinance(String pay_method, double amount) throws SQLException {
-        return SqlUtil.execute("UPDATE finance SET amount = amount + ? WHERE pay_method = ?", pay_method, amount);
+        return SqlUtil.execute("UPDATE finance SET amount = amount + ? WHERE pay_method = ?", amount, pay_method);
     }
 
     @Override
@@ -45,6 +45,6 @@ public class FinanceDAOImpl implements FinanceDAO {
 
     @Override
     public boolean reduceFinanceOtherSalary(String pay_method, double amount) throws SQLException {
-        return SqlUtil.execute("UPDATE finance SET amount = amount - ? WHERE pay_method = ?", pay_method, amount);
+        return SqlUtil.execute("UPDATE finance SET amount = amount - ? WHERE pay_method = ?", amount, pay_method);
     }
 }

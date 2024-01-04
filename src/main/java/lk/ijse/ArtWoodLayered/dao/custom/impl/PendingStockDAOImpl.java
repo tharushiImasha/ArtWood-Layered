@@ -17,7 +17,7 @@ public class PendingStockDAOImpl implements PendingStockDAO {
         int max = 0;
         while (resultSet.next()){
             String x = resultSet.getString(1);
-            String[] y = x.split("PE");
+            String[] y = x.split("N");
             int id = Integer.parseInt(y[1]);
 
             if (max < id){
@@ -26,7 +26,7 @@ public class PendingStockDAOImpl implements PendingStockDAO {
 
         }
 
-        return "PE" + ++max;
+        return "N" + ++max;
     }
 
     @Override
@@ -53,13 +53,13 @@ public class PendingStockDAOImpl implements PendingStockDAO {
     }
 
     @Override
-    public boolean save(PendingStock dto) throws SQLException {
-        return SqlUtil.execute("INSERT INTO pending_stock VALUES(?, ?, ?, ?, ?)", dto);
+    public boolean save(PendingStock entity) throws SQLException {
+        return SqlUtil.execute("INSERT INTO pending_stock VALUES(?, ?, ?, ?, ?)", entity.getPending_id(),entity.getAmount(), entity.getEmp_id(), entity.getWood_piece_id(), entity.getFinished_id());
     }
 
     @Override
-    public boolean update(PendingStock dto) throws SQLException {
-        return SqlUtil.execute("UPDATE pending_stock SET emp_id = ?, wood_piece_id = ?, finished_stock_id = ? WHERE pending_stock_id = ?", dto);
+    public boolean update(PendingStock entity) throws SQLException {
+        return SqlUtil.execute("UPDATE pending_stock SET emp_id = ?, wood_piece_id = ?, finished_stock_id = ? WHERE pending_stock_id = ?", entity.getEmp_id(), entity.getWood_piece_id(), entity.getFinished_id(), entity.getPending_id());
     }
 
     @Override

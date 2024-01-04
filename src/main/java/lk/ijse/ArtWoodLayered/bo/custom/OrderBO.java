@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 public interface OrderBO extends SuperBO {
-    boolean saveOrder(String orderId, LocalDate date, String pay_meth, String cusId) throws SQLException;
+    boolean saveOrder(String orderId, LocalDate date, String pay_meth, int tel) throws SQLException;
 
     String generateNextOrderId() throws SQLException, ClassNotFoundException;
 }

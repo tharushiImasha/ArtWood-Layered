@@ -40,13 +40,13 @@ public class ProductTypeDAOImpl implements ProductTypeDAO {
     }
 
     @Override
-    public boolean save(ProductType dto) throws SQLException {
-        return SqlUtil.execute("INSERT INTO product_type VALUES(?, ?, ?, ?, ?)", dto);
+    public boolean save(ProductType entity) throws SQLException {
+        return SqlUtil.execute("INSERT INTO product_type VALUES(?, ?, ?, ?, ?)", entity.getProduct_id(), entity.getProduct_name(), entity.getQuality(), entity.getWood_type(), entity.getPrice());
     }
 
     @Override
-    public boolean update(ProductType dto) throws SQLException {
-        return SqlUtil.execute("UPDATE product_type SET product_name = ?, quality = ?, wood_type = ?, price = ? WHERE product_id = ?", dto);
+    public boolean update(ProductType entity) throws SQLException {
+        return SqlUtil.execute("UPDATE product_type SET product_name = ?, quality = ?, wood_type = ?, price = ? WHERE product_id = ?", entity.getProduct_name(), entity.getQuality(), entity.getWood_type(), entity.getPrice(), entity.getProduct_id());
     }
 
     @Override

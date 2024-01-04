@@ -43,8 +43,8 @@ public class CustomerDAOImpl implements CustomerDAO {
         while (resultSet.next()) {
             Customer entity = new Customer(
                     resultSet.getString("cus_id"),
-                    resultSet.getString("cus_name"),
-                    resultSet.getString("cus_address"),
+                    resultSet.getString("name"),
+                    resultSet.getString("address"),
                     resultSet.getInt("tel")
             );
             dtoList.add(entity);
@@ -53,13 +53,13 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public boolean save(Customer dto) throws SQLException {
-        return SqlUtil.execute("INSERT INTO customer VALUES(?, ?, ?, ?)", dto);
+    public boolean save(Customer entity) throws SQLException {
+        return SqlUtil.execute("INSERT INTO customer VALUES(?, ?, ?, ?)", entity.getId(), entity.getName(), entity.getAddress(), entity.getTel());
     }
 
     @Override
-    public boolean update(Customer dto) throws SQLException {
-        return SqlUtil.execute("UPDATE customer SET name = ?, address = ?, tel = ? WHERE cus_id = ?", dto);
+    public boolean update(Customer entity) throws SQLException {
+        return SqlUtil.execute("UPDATE customer SET name = ?, address = ?, tel = ? WHERE cus_id = ?", entity.getName(), entity.getAddress(), entity.getTel(), entity.getId());
     }
 
     @Override

@@ -5,64 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f5c7c8-6634-4a48-8f5f-9949de55d719" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/AppInitializerWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/FinanceBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/LoginBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/OrderBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/OtherEmployeeSalaryBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/PlaceOrderBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/SalaryBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/FinanceBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/LoginBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/OrderBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/OtherEmployeeSalaryBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/PlaceOrderBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/SalaryBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/CashierCustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/CashierOrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/StockManagerStockController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/LoginDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/OrderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/OrderDetailDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/OtherEmployeeSalaryDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/SalaryDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/LoginDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/OrderDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/OrderDetailDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/OtherEmployeeSalaryDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/SalaryDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/OtherSalary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/entity/Salary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/BOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/BOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/EditProfileBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/EditProfileBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/PendingStockBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/PendingStockBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/EditProfileBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/EditProfileBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/PendingStockBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/PendingStockBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/SupplierBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/SupplierBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/CashierDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/CashierDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/CashierDashboardPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/CashierDashboardPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/DashboardPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/DashboardPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/EditProfileFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/EditProfileFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ForgotPwController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ForgotPwController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ItemTestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/LoginFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerFinanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerFinanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/OwnerStockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/OrderBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/OrderBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/OrderBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/OrderBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/PlaceOrderBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/PlaceOrderBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/PlaceSupOrderBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/bo/custom/impl/PlaceSupOrderBOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/PendingStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/PendingStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ResetPwController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/ResetPwController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/SalaryFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/SalaryFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/StockManagerDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/StockManagerDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/StockManagerDashboardPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/controller/StockManagerDashboardPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/DAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/EditProfileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/EditProfileDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/CustomerDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/EditProfileDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/EditProfileDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/EmployeeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/EmployeeDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/FinanceDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/FinanceDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/FinishedStockDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/FinishedStockDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/LogStockDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/LogStockDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/OrderDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/OrderDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/OtherEmployeeSalaryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/OtherEmployeeSalaryDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/PendingStockDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/PendingStockDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/ProductTypeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/ProductTypeDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/SalaryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/SalaryDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/SupplierDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/SupplierDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/WoodPiecesStockDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered/dao/custom/impl/WoodPiecesStockDAOImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,17 +54,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AppInitializer.executor": "Run",
-    "Application.AppInitializerWrapper.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/tharu/Downloads/project/project/orginal/ArtWood-Layerd/src/main/java/lk/ijse/ArtWoodLayered"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AppInitializer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AppInitializerWrapper.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/tharu/Downloads/project/project/orginal/ArtWood-Layerd/src/main/java/lk/ijse/ArtWoodLayered&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/lk/ijse/ArtWoodLayered" />
@@ -122,6 +84,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="AppInitializerWrapper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lk.ijse.ArtWoodLayered.AppInitializerWrapper" />
+      <module name="ArtWood-Layerd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lk.ijse.ArtWoodLayered.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,6 +108,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AppInitializerWrapper" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

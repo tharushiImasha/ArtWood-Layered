@@ -52,13 +52,13 @@ public class OtherEmployeeSalaryDAOImpl implements OtherEmployeeSalaryDAO {
     }
 
     @Override
-    public boolean save(OtherSalary dto) throws SQLException {
-        return SqlUtil.execute("INSERT INTO otherSalary VALUES(?, ?, ?)", dto);
+    public boolean save(OtherSalary entity) throws SQLException {
+        return SqlUtil.execute("INSERT INTO otherSalary VALUES(?, ?, ?)", entity.getOther_salary_id(), entity.getAmount(), entity.getEmp_id());
     }
 
     @Override
-    public boolean update(OtherSalary dto) throws SQLException {
-        return SqlUtil.execute("UPDATE otherSalary SET emp_id = ?, amount = ? WHERE other_salary_id = ?", dto);
+    public boolean update(OtherSalary entity) throws SQLException {
+        return SqlUtil.execute("UPDATE otherSalary SET emp_id = ?, amount = ? WHERE other_salary_id = ?", entity.getEmp_id(), entity.getAmount(), entity.getOther_salary_id());
     }
 
     @Override

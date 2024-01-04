@@ -24,7 +24,7 @@ public class PlaceOrderBOImpl implements PlaceOrderBO {
             connection = DbConnection.getInstance().getConnection();
             connection.setAutoCommit(false);
 
-            boolean isOrderSaved = orderDAO.saveOrder(pDto.getOrderId(), pDto.getDate(), pDto.getPay_meth(), String.valueOf(pDto.getTel()));
+            boolean isOrderSaved = orderDAO.saveOrder(pDto.getOrderId(), pDto.getDate(), pDto.getPay_meth(), pDto.getTel());
 
             if (isOrderSaved) {
                 boolean isUpdated = finishedStockDAO.updateItem(pDto.getTmList());

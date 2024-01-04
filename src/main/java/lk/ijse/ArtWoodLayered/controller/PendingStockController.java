@@ -14,6 +14,7 @@ import lk.ijse.ArtWoodLayered.bo.custom.EmployeeBO;
 import lk.ijse.ArtWoodLayered.bo.custom.FinishedStockBO;
 import lk.ijse.ArtWoodLayered.bo.custom.PendingStockBO;
 import lk.ijse.ArtWoodLayered.bo.custom.WoodPiecesStockBO;
+import lk.ijse.ArtWoodLayered.db.DbConnection;
 import lk.ijse.ArtWoodLayered.dto.EmployeeDto;
 import lk.ijse.ArtWoodLayered.dto.FinishedStockDto;
 import lk.ijse.ArtWoodLayered.dto.PendingStockDto;
@@ -270,7 +271,7 @@ public class PendingStockController {
         Connection connection = null;
 
         try {
-
+            connection = DbConnection.getInstance().getConnection();
             pendingStockBO.save(dto, wood_piece_id, emp_id);
 
         } catch (SQLException e) {

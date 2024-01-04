@@ -12,8 +12,8 @@ public class OrderBOImpl implements OrderBO {
     OrderDAO orderDAO = (OrderDAO) DAOFactory.getDaoFactory().getDao(DAOFactory.DaoTypes.ORDER);
 
     @Override
-    public boolean saveOrder(String orderId, LocalDate date, String pay_meth, String cusId) throws SQLException {
-        return orderDAO.saveOrder(orderId, date,pay_meth, cusId);
+    public boolean saveOrder(String orderId, LocalDate date, String pay_meth, int tel) throws SQLException {
+        return orderDAO.saveOrder(orderId, date,pay_meth, tel);
     }
 
     @Override

@@ -54,13 +54,13 @@ public class FinishedStockDAOImpl implements FinishedStockDAO {
     }
 
     @Override
-    public boolean save(FinishedStock dto) throws SQLException {
-        return SqlUtil.execute("INSERT INTO finished_stock VALUES(?, ?, ?)", dto);
+    public boolean save(FinishedStock entity) throws SQLException {
+        return SqlUtil.execute("INSERT INTO finished_stock VALUES(?, ?, ?)", entity.getFinished_id(), entity.getAmount(), entity.getProduct_id());
     }
 
     @Override
-    public boolean update(FinishedStock dto) throws SQLException {
-        return SqlUtil.execute("UPDATE finished_stock SET finished_amount = ? WHERE finished_stock_id = ?", dto);
+    public boolean update(FinishedStock entity) throws SQLException {
+        return SqlUtil.execute("UPDATE finished_stock SET finished_amount = ? WHERE finished_stock_id = ?", entity.getAmount(), entity.getFinished_id());
     }
 
     @Override
@@ -138,6 +138,6 @@ public class FinishedStockDAOImpl implements FinishedStockDAO {
 
     @Override
     public boolean updateQty(OrderTm cartTm) throws SQLException {
-       return SqlUtil.execute("UPDATE finished_stock SET finished_amount = finished_amount - ? WHERE finished_stock_id = ?", cartTm.getQty(), cartTm.getQty());
+       return SqlUtil.execute("UPDATE finished_stock SET finished_amount = finished_amount - ? WHERE finished_stock_id = ?", cartTm.getQty(), cartTm.getCode());
     }
 }

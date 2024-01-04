@@ -7,5 +7,5 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 public interface OrderDAO extends CrudDAO<Order> {
-    boolean saveOrder(String orderId, LocalDate date, String pay_meth, String cusId) throws SQLException;
+    boolean saveOrder(String orderId, LocalDate date, String pay_meth, int tel) throws SQLException;
 }

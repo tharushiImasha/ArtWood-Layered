@@ -5,6 +5,7 @@ import lk.ijse.ArtWoodLayered.dao.custom.WoodPiecesStockDAO;
 import lk.ijse.ArtWoodLayered.dto.WoodPiecesDto;
 import lk.ijse.ArtWoodLayered.entity.WoodPieces;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -55,13 +56,21 @@ public class WoodPiecesStockDAOImpl implements WoodPiecesStockDAO {
     }
 
     @Override
-    public boolean save(WoodPieces dto) throws SQLException {
-        return SqlUtil.execute("INSERT INTO wood_pieces_stock VALUES(?, ?, ?, ?, ?)", dto);
+    public boolean save(WoodPieces entity) throws SQLException {
+        return SqlUtil.execute("INSERT INTO wood_pieces_stock VALUES(?, ?, ?, ?, ?)", entity.getWood_piece_id(), entity.getQuality(), entity.getAmount(), entity.getWood_type(), entity.getLogs_id());
     }
 
     @Override
-    public boolean update(WoodPieces dto) throws SQLException {
-        return SqlUtil.execute("select wood_type from log_stock where logs_id = ?", dto);
+    public boolean update(WoodPieces entity) throws SQLException {
+        ResultSet resultSet = SqlUtil.execute("select wood_type from log_stock where logs_id = ?", entity.getLogs_id());
+
+        String wood_type = "";
+
+        if (resultSet.next()) {
+            wood_type = resultSet.getString(1);
+        }
+
+        return SqlUtil.execute("UPDATE wood_pieces_stock SET quality = ?, wood_amount = ?, wood_type = ?, logs_id = ? WHERE wood_piece_id = ?", entity.getQuality(), entity.getAmount(), wood_type, entity.getLogs_id(), entity.getWood_piece_id());
     }
 
     @Override

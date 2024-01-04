@@ -54,7 +54,7 @@ public class OrderDAOImpl implements OrderDAO {
     }
 
     @Override
-    public boolean saveOrder(String orderId, LocalDate date, String pay_meth, String cusId) throws SQLException {
-        return  SqlUtil.execute("INSERT INTO orders VALUES(?, ?, ?)", orderId, date, cusId);
+    public boolean saveOrder(String orderId, LocalDate date, String pay_meth, int tel) throws SQLException {
+        return  SqlUtil.execute("INSERT INTO orders VALUES(?, ?, ?)", orderId, date, tel);
     }
 }

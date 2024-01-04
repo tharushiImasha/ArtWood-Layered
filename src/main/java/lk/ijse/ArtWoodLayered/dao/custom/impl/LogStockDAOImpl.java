@@ -43,9 +43,9 @@ public class LogStockDAOImpl implements LogStockDAO {
 
         while (resultSet.next()) {
             Logs entity = new Logs(
-                    resultSet.getString("log_id"),
+                    resultSet.getString("logs_id"),
                     resultSet.getString("wood_type"),
-                    resultSet.getInt("log_amount")
+                    resultSet.getInt("logs_amount")
             );
             dtoList.add(entity);
         }
@@ -53,13 +53,13 @@ public class LogStockDAOImpl implements LogStockDAO {
     }
 
     @Override
-    public boolean save(Logs dto) throws SQLException {
-        return SqlUtil.execute("INSERT INTO log_stock VALUES(?, ?, ?)", dto);
+    public boolean save(Logs entity) throws SQLException {
+        return SqlUtil.execute("INSERT INTO log_stock VALUES(?, ?, ?)", entity.getLogs_id(), entity.getWood_type(), entity.getLog_amount());
     }
 
     @Override
-    public boolean update(Logs dto) throws SQLException {
-        return SqlUtil.execute("UPDATE log_stock SET wood_type = ?, logs_amount = ? WHERE logs_id = ?", dto);
+    public boolean update(Logs entity) throws SQLException {
+        return SqlUtil.execute("UPDATE log_stock SET wood_type = ?, logs_amount = ? WHERE logs_id = ?", entity.getWood_type(), entity.getLog_amount(), entity.getLogs_id());
     }
 
     @Override

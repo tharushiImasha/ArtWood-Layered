@@ -30,7 +30,7 @@ public class SupplierDAOImpl implements SupplierDAO {
         while (resultSet.next()) {
             Supplier entity = new Supplier(
                     resultSet.getString("sup_id"),
-                    resultSet.getString("name"),
+                    resultSet.getString("sup_name"),
                     resultSet.getString("address"),
                     resultSet.getString("email")
             );
@@ -40,13 +40,13 @@ public class SupplierDAOImpl implements SupplierDAO {
     }
 
     @Override
-    public boolean save(Supplier dto) throws SQLException {
-        return SqlUtil.execute("INSERT INTO supplier VALUES(?, ?, ?, ?)", dto);
+    public boolean save(Supplier entity) throws SQLException {
+        return SqlUtil.execute("INSERT INTO supplier VALUES(?, ?, ?, ?)", entity.getId(), entity.getName(), entity.getAddress(), entity.getEmail());
     }
 
     @Override
-    public boolean update(Supplier dto) throws SQLException {
-        return SqlUtil.execute("UPDATE supplier SET sup_name = ?, address = ?, email = ? WHERE sup_id = ?", dto);
+    public boolean update(Supplier entity) throws SQLException {
+        return SqlUtil.execute("UPDATE supplier SET sup_name = ?, address = ?, email = ? WHERE sup_id = ?", entity.getName(), entity.getAddress(), entity.getEmail(), entity.getId());
     }
 
     @Override
