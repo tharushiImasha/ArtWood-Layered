@@ -138,6 +138,6 @@ public class FinishedStockDAOImpl implements FinishedStockDAO {
 
     @Override
     public boolean updateQty(OrderTm cartTm) throws SQLException {
-       return SqlUtil.execute("UPDATE finished_stock SET finished_amount = finished_amount - ? WHERE finished_stock_id = ?", cartTm.getQty(), cartTm.getCode());
+       return SqlUtil.execute("UPDATE finished_stock SET finished_amount = finished_amount - ? WHERE finished_stock_id = ?", cartTm.getQty(), cartTm.getCode() );
     }
 }

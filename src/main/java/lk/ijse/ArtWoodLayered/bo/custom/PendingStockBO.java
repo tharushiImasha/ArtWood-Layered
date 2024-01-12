@@ -21,5 +21,5 @@ public interface PendingStockBO extends SuperBO {
 
     void finishedPending(String id, String finished_id, String emp_id) throws SQLException, ClassNotFoundException;
 
-    void save(PendingStockDto dto, String wood_piece_id, String emp_id) throws SQLException;
+    boolean save(PendingStockDto dto, String wood_piece_id, String emp_id) throws SQLException;
 }

@@ -87,7 +87,7 @@ public class PendingStockBOImpl implements PendingStockBO {
     }
 
     @Override
-    public void save(PendingStockDto dto, String wood_piece_id, String emp_id) throws SQLException {
+    public boolean save(PendingStockDto dto, String wood_piece_id, String emp_id) throws SQLException {
         Connection connection = null;
 
         connection = DbConnection.getInstance().getConnection();
@@ -102,10 +102,11 @@ public class PendingStockBOImpl implements PendingStockBO {
                 boolean isEmployeeUpdated = employeeDAO.employeeAvailability(emp_id, "Not Available");
                 if (isEmployeeUpdated) {
                     connection.commit();
+                    return true;
                 }
             }
         }
-
+        return false;
     }
 
 }

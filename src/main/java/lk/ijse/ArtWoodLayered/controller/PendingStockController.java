@@ -215,7 +215,7 @@ public class PendingStockController {
         Connection connection = null;
 
         try {
-
+            connection = DbConnection.getInstance().getConnection();
             pendingStockBO.finishedPending(id, finished_id, emp_id);
 
         } catch (SQLException e) {
@@ -272,7 +272,11 @@ public class PendingStockController {
 
         try {
             connection = DbConnection.getInstance().getConnection();
-            pendingStockBO.save(dto, wood_piece_id, emp_id);
+            boolean isSaved = pendingStockBO.save(dto, wood_piece_id, emp_id);
+
+            if(isSaved) {
+                new Alert(Alert.AlertType.CONFIRMATION, "pending saved!").show();
+            }
 
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
