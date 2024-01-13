@@ -217,6 +217,7 @@ public class PendingStockController {
         try {
             connection = DbConnection.getInstance().getConnection();
             pendingStockBO.finishedPending(id, finished_id, emp_id);
+            deletePending(id);
 
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
